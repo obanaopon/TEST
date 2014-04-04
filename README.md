@@ -43,7 +43,7 @@ __aaaaaaa__
 section.3
 -----------
 
-開発版
+開発版(AAAAAAAAAAAA)
 -------
 
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
