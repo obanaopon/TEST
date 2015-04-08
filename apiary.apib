@@ -4,33 +4,28 @@ HOST: https://xxx.xxx.xxx.xxx/api/v1/
 # SGADP-API
 ## このドキュメントについて
 - SGADPセンシング業務で公開するオープンデータAPI(という位置付け)をまとめたものです。
-- [オープンデータ活用コンテスト](http://tokyometro10th.jp/future/opendata/index.html)参加者が参照することを想定しています
-- `API Blueprints`で記述され、[apiary.io](http://apiary.io/)によって、ホスティングされています
-- [元データ](https://github.com/syotaro/TokyoMetroOpendataAPI/blob/master/apiary.apib)は、github上に保存されています[markdownでプレビューする](https://github.com/syotaro/TokyoMetroOpendataAPI/blob/master/apiary.md)と見やすいです
-
+- `API Blueprints`で記述され、[apiary.io](http://apiary.io/)によって、ホスティングしています。
 
 ## このドキュメントから得られる情報
-以下を得ることができます
 
 - APIの詳細な仕様
   - Request Parameters
   - Response Parameters
   - Sample Response
-- 本番APIに対してリクエストを発行及び結果の取得
+- [apiary.io](http://apiary.io/)が提供するMockServerを利用し、リクエスト発行及び結果取得の動作を確認できます。
+    -   MockServerで取得できる結果は実データではありません。(スタブデータ)
 - APIからデータを取得する為のコードスニペットを発行する。スニペットの形式は、12の言語、形式(JavaScript,Raw,cURL,Node.js,Python,PHP,Ruby,C#,Visual,Groovy,Objective-C,Swift)に対応する
 
-## 本番APIへのリクエスト発行手順
+## 実環境のSGADP-APIへのリクエスト発行手順
 
+-   アクセストークン発行手順に従い、全てのアクセス
 - 以下、駅時刻表を取得する例
 - 「xxxxxxxxxxxxxxxxxxx」の部分には、自身のアクセストークンを記入する
 
-![](http://s3img.jp/20140921151100.png)
+# Group 通信アダプタAPI
 
-
-# Group メトロデータ取得・検索API
-
-## 駅時刻表 [/datapoints?rdf:type=odpt:StationTimetable&acl%3AconsumerKey={acl%3AconsumerKey}&odpt:station={odpt%3Astation}]
-各駅の平日、土曜、休日の列車着時刻、発車時刻と種別を表す。
+## 通信アダプタ一覧 [/datapoints?rdf:type=odpt:StationTimetable&acl%3AconsumerKey={acl%3AconsumerKey}&odpt:station={odpt%3Astation}]
+SGADPセンシング業務サーバに登録されている通信アダプタの一覧を取得する。
 
 + Parameters
     + rdf%3Atype                    (required, odpt:StationTimetable, `odpt:StationTimetable`) ... クラス指定
